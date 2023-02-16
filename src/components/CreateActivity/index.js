@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import MenuItem from "@material-ui/core/MenuItem";
+// import MenuItem from "@material-ui/core/MenuItem";
 import { useDispatch } from "react-redux";
 import favoriteListSlice from "@/redux/slices/favoriteList";
 import { Button, Input, InputLabel, Select, Typography } from "@mui/material";
@@ -87,9 +87,9 @@ const CreateActivity = () => {
     }
   };
 
-  useEffect(() => {
-    setFormErrors(validate(createdActivity));
-  }, [createdActivity]);
+  // useEffect(() => {
+  //   setFormErrors(validate(createdActivity));
+  // }, [createdActivity]);
 
   const validate = (values) => {
     const errors = {};
@@ -145,7 +145,7 @@ const CreateActivity = () => {
       </LabelAndInputContainer>
       <LabelAndInputContainer>
         <DropDownLabel id="imple-select-label">Participants</DropDownLabel>
-        <Select
+        {/* <Select
           labelId="simple-select-label"
           id="simple-select"
           value={createdActivity.participants}
@@ -161,14 +161,14 @@ const CreateActivity = () => {
           <MenuItem value={6}>6</MenuItem>
           <MenuItem value={7}>7</MenuItem>
           <MenuItem value={8}>8</MenuItem>
-        </Select>
+        </Select> */}
         <FieldRequired variant="p" color="red">
           {formErrors.participants}
         </FieldRequired>
       </LabelAndInputContainer>
       <LabelAndInputContainer>
         <DropDownLabel id="imple-select-label">Type</DropDownLabel>
-        <Select
+        {/* <Select
           labelId="simple-select-label"
           id="simple-select"
           value={createdActivity.type}
@@ -185,7 +185,7 @@ const CreateActivity = () => {
           <MenuItem value={"relaxation"}>Relaxation</MenuItem>
           <MenuItem value={"music"}>Music</MenuItem>
           <MenuItem value={"busywork"}>Busywork</MenuItem>
-        </Select>
+        </Select> */}
       </LabelAndInputContainer>
       <LabelAndInputContainer>
         <Label>Price</Label>

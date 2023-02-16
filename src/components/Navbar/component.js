@@ -74,9 +74,13 @@ const Navbar = ({
     }
   };
 
-  useEffect(() => {
+  if (isFavoriteSlidePanelOpen) {
     getFavoritedActivities();
-  }, [favoriteActivities]);
+  }
+
+  // useEffect(() => {
+  //   getFavoritedActivities();
+  // }, [favoriteActivities]);
 
   const favoriteActivitiesList = favoriteActivities.map((activity) => (
     <FavoriteActivityCard
