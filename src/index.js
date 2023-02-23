@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
 import { Provider } from "react-redux";
 import { createMuiTheme } from "@material-ui/core/styles";
@@ -42,7 +42,7 @@ const theme = createMuiTheme({
 });
 
 const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <Provider store={store}>

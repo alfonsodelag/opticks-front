@@ -65,7 +65,7 @@ const FavoriteActivityCard = (props) => {
       <CardContainer>
         <CardTitleContainer>
           <CardTitle>{activity}</CardTitle>
-          <FavoriteIcon />
+          <h1>Favorite Icon</h1>
         </CardTitleContainer>
         <DetailsTable>
           <div>
